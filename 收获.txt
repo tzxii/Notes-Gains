@@ -1,0 +1,17 @@
+1.学到了Distributed_System是基于类Unix系统的，windows系统不能完成那些进程等等的东西。
+
+2.所以我们使用WSL，也就是windows系统的linux子系统。其使用的linux是内核，发行版本是Ubuntu，WSL是linux最终运行的载体。
+然后我们使用vscode对其进行编辑。
+
+3.完整的使用git的流程（每到一台新的机器，新的操作系统里面）：
+（1）git --version确保git已经安装 。  记得本地也需要先有git仓库才行，也就是git init
+（2）git config --global user.name "你的名字"
+		git config --global user.email "你的GitHub邮箱"
+	设置对应的提交者信息。
+（3）ls ~/.ssh查看是否已经有ssh密钥，没有则生成：
+	ssh-keygen -t ed25519 -C "3140749482@qq.com"
+	cat ~/.ssh/id_ed25519.pub 把这个复制到github里的setting
+	ssh -T git@github.com 查看是否能连接到github
+（4）git remote -v确认一下远程仓库
+	git remote set-url xxxxxx
+（5）add commit push
