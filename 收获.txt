@@ -15,3 +15,13 @@
 （4）git remote -v确认一下远程仓库
 	git remote set-url xxxxxx
 （5）add commit push
+
+
+4.git pull --rebase origin main 调整自己本地的，适配远端的仓库。也就是减少分支，而是把自己的此次修改直接和远端仓库拼成一个分支。
+记住这条“工程判断准则”：
+
+只有你一个人用的分支
+👉 rebase（整理自己）
+
+已经给别人用 / 公共分支
+👉 merge（尊重历史）
